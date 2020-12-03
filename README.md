@@ -8,8 +8,8 @@ it is a simple application that uses a Weather API (https://openweathermap.org/)
 
 
 
-# Sources :
-https://www.youtube.com/watch?v=E2VSL8x7nq0
+# Sources/Documentation :
 https://openweathermap.org/guide
 https://www.php.net/manual/fr/book.curl.php
+https://openclassrooms.com/fr/courses/1567926-un-site-web-dynamique-avec-jquery/1569648-le-fonctionnement-de-ajax
 

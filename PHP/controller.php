@@ -31,23 +31,27 @@ function getApiData($parameters=[])
 
     $data = file_get_contents($apiurl);
     $data = json_decode($data);
-
-     // Nom de la ville
-     $name = $data->name;
     
-     // Météo
-     $desc = $data->weather[0]->description;
+     // Nom de la ville
+    $name = $data->name;
+
+    //  // Météo
+    $desc = $data->weather[0]->description;
  
-     // Températures
+    //  // Températures
      $temp = $data->main->temp;
 
-    $result = new stdClass();
-    $result->temp = $temp;   
-    $result->description = $desc;
-    $result->name = $name;
-    var_dump(json_encode($result));
-    return json_encode($result);
-
+    $data = array(
+        array(
+            'name'=>$name,
+            'temp'=>$temp,
+            'desc'=>$desc,
+        ),
+        
+    );
+    
+    echo json_encode($data);
+    return $data;
  
 }
 
@@ -56,11 +60,10 @@ function getWeatherCity($city)
 {
     $parameters[] = constants::API_CITY.$city;
 
-    $apiConnection = getApiData($parameters);
+    $getApi = getApiData($parameters);
 
-    return $apiConnection;
+    return $getApi;
 }
-getWeatherCity('Paris');
 
 ?>
 
