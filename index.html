@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>WEATHER DO GOOD</title>
+    <link href="app.css" rel="stylesheet">
 </head>
 <body>
 
     <h1>WEATHER DO GOOD APP</h1>
-    <p>Retrouvez la météo actuelle de la ville de votre choix ainsi que sur les trois prochains jours </p>
-    <h2>Choisir une ville</h2>
-    <span id="error"></span>
-    <input type="text" name="city" id="city" placeholder="Entrer le nom d'une ville">
-    <button id="submitLocation">Chercher</button>
-    <div id="show"></div>
+    <div class="input">
+        <input type="text" name="city" id="city" placeholder="Entrer le nom d'une ville" class="input_text">
+        <input type="submit" id="submitLocation" value="Chercher" class="submit"></input></br>
+        <span id="error"></span>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div id="show" class="show"></div>
+        </div>
+    </div>
 
 </body>
 

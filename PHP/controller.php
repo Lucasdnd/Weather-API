@@ -47,12 +47,6 @@ function getWeatherCity($city)
 
     //City
     $name = $data->name;
-
-    //Weather
-    $desc = $data->weather[0]->description;
-  
-    //Temp
-    $temp = $data->main->temp;
  
     //Coordonates
     $lat = $data->coord->lat;
@@ -96,18 +90,17 @@ function formatForecast($data)
     $i = 0;
     foreach($weatherForecasts['daily'] as $weatherForecast){
         $dataFormat[] = [     
-            'dt' => date('d/m/y', $weatherForecast['dt']),
+            'dt' => date('d/m/yy', $weatherForecast['dt']),
             'temp_day' => $weatherForecast['temp']['day'],
             'desc' => $weatherForecast['weather'][0]['description'],
         ];
 
         $i++;
 
-        if($i > 2){
+        if($i > 3){
             break;
         }
     }
-
     echo json_encode($dataFormat);
  
     return $data;

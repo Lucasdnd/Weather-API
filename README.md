@@ -6,7 +6,7 @@ it is a simple application that uses a Weather API (https://openweathermap.org/)
 
 # Initialization of project :
 
-
+local hosting on Laragon server
 
 # Sources/Documentation :
 https://openweathermap.org/guide</br>

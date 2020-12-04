@@ -34,11 +34,14 @@ $(document).ready(function(){
 
 function show(data){
     console.log(data.length);
-    document.getElementById('show').innerHTML+="<h3> Acutellement, il fait "+ data[0]['temp_day'] +'°C'+" et "+ data[0]['desc'] +"</h3>";
+    document.getElementById('show').innerHTML=`<h3> Actuellement, il fait ${data[0]['temp_day']} °C et ${data[0]['desc']} à `+$("#city").val()+`</h3></br>`;
 
-    for (let i = 0; i < data.length; i++){
+    for (let i = 1; i < data.length; i++){
 
         console.log(data[i]);
-        document.getElementById('show').innerHTML+="<h3> le "+data[i]['dt']+" il fera "+ data[i]['temp_day'] +'°C'+" et "+ data[i]['desc'] +"</h3>";
+        document.getElementById('show').innerHTML+=`<h3> le ${data[i]['dt']} il fera ${data[i]['temp_day']} °C et ${data[i]['desc']} à `+$("#city").val()+`</h3>`;
+
     }
+
+    // return "<h3> Acutellement, il fait "+ data[0]['temp_day'] +'°C'+" à "+ data[0]['name'] +"</h3><h3>"+ data[0]['desc'] +"</h3>";
 }
