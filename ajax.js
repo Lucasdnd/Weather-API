@@ -14,7 +14,7 @@ $(document).ready(function(){
                 type: "GET",
                 dataType: "json",
                 success: function(data){
-                    console.log(data);
+                    // console.log(data);
 
                     var information = show(data);
                     $("#show").html(information); 
@@ -33,5 +33,12 @@ $(document).ready(function(){
 })
 
 function show(data){
-    return "<h3> il fait "+ data[0]['temp'] +'°C'+" à "+data[0]['name'] +"</h3><h3>"+data[0]['desc'] +"</h3>";
+    console.log(data.length);
+    document.getElementById('show').innerHTML+="<h3> Acutellement, il fait "+ data[0]['temp_day'] +'°C'+" et "+ data[0]['desc'] +"</h3>";
+
+    for (let i = 0; i < data.length; i++){
+
+        console.log(data[i]);
+        document.getElementById('show').innerHTML+="<h3> le "+data[i]['dt']+" il fera "+ data[i]['temp_day'] +'°C'+" et "+ data[i]['desc'] +"</h3>";
+    }
 }

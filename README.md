@@ -9,7 +9,7 @@ it is a simple application that uses a Weather API (https://openweathermap.org/)
 
 
 # Sources/Documentation :
-https://openweathermap.org/guide
-https://www.php.net/manual/fr/book.curl.php
+https://openweathermap.org/guide</br>
+https://www.php.net/manual/fr/book.curl.php</br>
 https://openclassrooms.com/fr/courses/1567926-un-site-web-dynamique-avec-jquery/1569648-le-fonctionnement-de-ajax
 
