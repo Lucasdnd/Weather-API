@@ -20,7 +20,7 @@ $(document).ready(function(){
                     $("#show").html(information); 
                 },
                 error: function(){
-                    $('#error').html("Nom d'une ville incorrect");
+                    $('#error').html("Nom de la ville incorrect");
                 }
                   
             });

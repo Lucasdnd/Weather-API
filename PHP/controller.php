@@ -91,7 +91,7 @@ function formatForecast($data)
     foreach($weatherForecasts['daily'] as $weatherForecast){
         $dataFormat[] = [     
             'dt' => date('d/m/yy', $weatherForecast['dt']),
-            'temp_day' => $weatherForecast['temp']['day'],
+            'temp_day' =>ceil( $weatherForecast['temp']['day']),
             'desc' => $weatherForecast['weather'][0]['description'],
         ];
 
